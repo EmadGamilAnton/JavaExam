@@ -7,7 +7,7 @@ package testsimplecircle;
 
 /**
  *
- * @author Emad
+ * @author Emad Gamil Anton
  */
 public class TestSimpleCircle {
     // datafield radius 
