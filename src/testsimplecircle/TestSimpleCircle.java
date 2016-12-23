@@ -10,15 +10,37 @@ package testsimplecircle;
  * @author Emad
  */
 public class TestSimpleCircle {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        System.out.println("Hello Test for Git ");
-        System.out.println("Hello agin for Git ");
-        System.out.println("this for pop from repositrty ");
+    
+    double radius;
+    TestSimpleCircle(){
         
     }
-    
+    public TestSimpleCircle(double newRadius) {
+        this.radius = newRadius;
+    }
+    public static void main(String[] args) {
+        TestSimpleCircle circle1 = new TestSimpleCircle(1);
+        circle1.printDetails();
+        TestSimpleCircle circle2 = new TestSimpleCircle(25);
+        circle2.printDetails();
+        TestSimpleCircle circle3 = new TestSimpleCircle(100);
+        circle3.printDetails();
+        TestSimpleCircle circle4 = new TestSimpleCircle(125);
+        circle4.printDetails();   
+    }
+    public double getArea(){
+        return Math.PI * Math.pow(radius, 2);
+    }
+    public double getPriemeter(){
+        return 2 * Math.PI * radius;
+    }
+    public void setRadius(double newRadius){
+       radius = newRadius;
+    }
+    public void printDetails(){
+        System.out.println("Calculate Area and Priemter for Circle With Radius "+radius+" cm");
+        System.out.println("Area      = "+getArea()+" cm^2");
+        System.out.println("Priemeter = "+getPriemeter()+" cm");
+        System.out.println("---------------------------------------------------------");
+    }  
 }
